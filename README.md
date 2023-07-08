@@ -64,7 +64,7 @@ void print_world(char *world, int rows, int cols) {
             if (world[j + i * cols] == 'd') {
                 printf("|   "); // Cella morta
             } else {
-                printf("| - "); // Cella viva
+                printf("| a "); // Cella viva
             }
             if (j == cols - 1) {
                 printf("|\n");
@@ -177,6 +177,9 @@ int main(int argc, char **argv) {
     // Calcola il numero di righe assegnate a ciascun processo
     int local_rows = rows / nproc;
 
+    // Variabili per calcolare i tempi di esercuzione
+    double T_inizio,T_fine,T_max;
+
     // Alloca la griglia del mondo e la griglia locale
     char *world = malloc(rows * cols * sizeof(char));
     char *local_world = malloc(local_rows * cols * sizeof(char));
@@ -189,6 +192,8 @@ int main(int argc, char **argv) {
     // Distribuisce il mondo iniziale a tutti i processi
     MPI_Scatter(world + cols, local_rows * cols, MPI_CHAR, local_world, local_rows * cols, MPI_CHAR, 0, MPI_COMM_WORLD);
 
+    // Inizio timer per i tempi 
+    T_inizio = MPI_Wtime();
     // Calcola e aggiorna lo stato del mondo per ogni round
     for (int round = 0; round < 25; round++) {
         compute_next_round(me, nproc, local_world, local_rows, cols);
