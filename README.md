@@ -250,7 +250,7 @@ Nella tabella qui sotto presente registro i dati da me registrati
 | 8192*8192 |      251,68 |    126,01 | 1,99 | 0,99 |     97,96 | 2,26 | 0,56 |     49,04 | 4,51 | 0,56 |     25,96 | 8,52 | 0,53 |
 
 ![speedup forte](https://github.com/emanuelemusto/PCPCproject/blob/main/asserts/Speedup%20forte.png)
-![Efficienza]([https://github.com/emanuelemusto/PCPCproject/blob/main/asserts/Speedup%20forte.png](https://github.com/emanuelemusto/PCPCproject/blob/main/asserts/Efficienza%20%20.png))
+![Efficienza](https://github.com/emanuelemusto/PCPCproject/blob/main/asserts/Efficienza%20%20.png)
 
 ### Weak Scalability 
 
@@ -265,8 +265,8 @@ La weak scalability è dominata dalla legge di Gustafson, essa mette in relazion
 | speedup    | 2,01      | 2,34      | 4,73     | 9,68      |
 | efficienza | 1	     | 0,58      | 0,60    | 0,60  | 
 
-![speedup debole]([https://github.com/emanuelemusto/PCPCproject/blob/main/asserts/Speedup%20forte.png](https://github.com/emanuelemusto/PCPCproject/blob/main/asserts/Speedup%20debole.png))
-![Efficienza debole]([[https://github.com/emanuelemusto/PCPCproject/blob/main/asserts/Speedup%20forte.png](https://github.com/emanuelemusto/PCPCproject/blob/main/asserts/Efficienza%20%20.png)](https://github.com/emanuelemusto/PCPCproject/blob/main/asserts/Efficienza%202.png))
+![speedup debole](https://github.com/emanuelemusto/PCPCproject/blob/main/asserts/Speedup%20debole.png)
+![Efficienza debole](https://github.com/emanuelemusto/PCPCproject/blob/main/asserts/Efficienza%202.png)
 
 ## Conclusioni
 
