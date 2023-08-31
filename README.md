@@ -17,8 +17,11 @@ Si tratta in realtà di un gioco senza giocatori, intendendo che la sua evoluzio
 Le transizioni dipendono unicamente dallo stato delle celle vicine in quella generazione:
 
 -Qualsiasi cella viva con meno di due celle vive adiacenti muore, come per effetto d'isolamento;
+
 -Qualsiasi cella viva con due o tre celle vive adiacenti sopravvive alla generazione successiva;
+
 -Qualsiasi cella viva con più di tre celle vive adiacenti muore, come per effetto di sovrappopolazione;
+
 -Qualsiasi cella morta con esattamente tre celle vive adiacenti diventa una cella viva, come per effetto di riproduzione.
 
 ## Presentazione del codice 
