@@ -11,7 +11,7 @@ mpirun -np N gol
 ```
 dove **N** è il numero di processori che si vuole usare 
 
-## Descrizione del Problema
+## Descrizione del problema
 Si tratta in realtà di un gioco senza giocatori, intendendo che la sua evoluzione è determinata dal suo stato iniziale, senza necessità di alcun input da parte di giocatori umani. Si svolge su una griglia di caselle quadrate (celle) che si estende all'infinito in tutte le direzioni; questa griglia è detta mondo. Ogni cella ha 8 vicini, che sono le celle ad essa adiacenti, includendo quelle in senso diagonale. Ogni cella può trovarsi in due stati: viva o morta (o accesa e spenta, on e off). Lo stato della griglia evolve in intervalli di tempo discreti, cioè scanditi in maniera netta. Gli stati di tutte le celle in un dato istante sono usati per calcolare lo stato delle celle all'istante successivo. Tutte le celle del mondo vengono quindi aggiornate simultaneamente nel passaggio da un istante a quello successivo: passa così una generazione.
 
 Le transizioni dipendono unicamente dallo stato delle celle vicine in quella generazione:
@@ -24,7 +24,7 @@ Le transizioni dipendono unicamente dallo stato delle celle vicine in quella gen
 
 -Qualsiasi cella morta con esattamente tre celle vive adiacenti diventa una cella viva, come per effetto di riproduzione.
 
-## Descrizione del Problema
+## Soluzione del problema proposta
 La soluzione che intendo addotare prevedere questi vari step:
 
 -Il Master (il processore 0) suddivide la matrice in P blocchi di righe, ciascuno dei quali contiene un numero di righe uguale a N diviso per P, dove N sono le righe e P i processori.
