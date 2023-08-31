@@ -25,7 +25,7 @@ Le transizioni dipendono unicamente dallo stato delle celle vicine in quella gen
 -Qualsiasi cella morta con esattamente tre celle vive adiacenti diventa una cella viva, come per effetto di riproduzione.
 
 ## Soluzione del problema proposta
-La soluzione che intendo addotare prevedere questi vari step:
+La soluzione che intendo adottare  prevedere questi vari step:
 
 -Il Master (il processore 0) suddivide la matrice in P blocchi di righe, ciascuno dei quali contiene un numero di righe uguale a N diviso per P, dove N sono le righe e P i processori.
 
