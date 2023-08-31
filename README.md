@@ -24,6 +24,15 @@ Le transizioni dipendono unicamente dallo stato delle celle vicine in quella gen
 
 -Qualsiasi cella morta con esattamente tre celle vive adiacenti diventa una cella viva, come per effetto di riproduzione.
 
+## Descrizione del Problema
+La soluzione che intendo addotare prevedere questi vari step:
+
+-Il Master (il processore 0) suddivide la matrice in P blocchi di righe, ciascuno dei quali contiene un numero di righe uguale a N diviso per P, dove N sono le righe e P i processori.
+
+-Il Master invia ciascun blocco di righe a un processo Slave con un'operazione di Scatter.
+
+-Ogni processo Slave riceve il suo blocco di righe e inizia a computare gli elementi delle righe interne considerando anche la riga precedente e successiva per il calcolo delle generazioni future.
+
 ## Presentazione del codice 
 Il codice riportato nella repository è una soluzione parallela al problema Games of Life utilizzando la libreria MPI.
 
